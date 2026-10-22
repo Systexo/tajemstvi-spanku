@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tajemství kvalitního spánku</title>
+<meta name="description" content="Kniha o spánku, u které neusneš. Praktický a vědecky podložený průvodce spánkem od psycholožky Veroniky Hylánové, MSc., s 33 kartičkami večerních rituálů.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<style>
+/* Layout: Bootstrap 5 one-pager dressed as the book — mint-grey paper, black ink, stick-figure doodles; night mode inverts to dark paper. */
+:root{
+  --paper:#EDF2F0; --sheet:#F8FAF9; --ink:#111211; --graphite:#4B4C4B; --ash:#A5A8A6; --cream:#FCF8E8;
+  --rule:rgba(17,18,17,.2); --illu-filter:none; --shadow-ink:#111211;
+  --f-display:"Lora",Georgia,"Times New Roman",serif;
+  --f-body:"Open Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-stamp:"Bebas Neue","Arial Narrow",Impact,sans-serif;
+  --f-hand:"Caveat","Segoe Print","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#121514;--sheet:#1A1E1C;--ink:#ECF1EF;--graphite:#B7BDBA;--ash:#5F6562;--cream:#27261E;--rule:rgba(236,241,239,.18);--illu-filter:invert(1);--shadow-ink:#000;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121514;--sheet:#1A1E1C;--ink:#ECF1EF;--graphite:#B7BDBA;--ash:#5F6562;--cream:#27261E;--rule:rgba(236,241,239,.18);--illu-filter:invert(1);--shadow-ink:#000;color-scheme:dark}
+
+:root{--bs-body-bg:var(--paper);--bs-body-color:var(--ink);--bs-body-font-family:var(--f-body);--bs-border-color:var(--rule);--bs-emphasis-color:var(--ink);--bs-secondary-color:var(--graphite);--bs-link-color:var(--ink);--bs-link-hover-color:var(--ink);--bs-focus-ring-color:rgba(17,18,17,.25)}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);line-height:1.65}
+.gutter{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3,.display{font-family:var(--f-display);text-wrap:balance;color:var(--ink)}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;line-height:1.15}
+.stamp{font-family:var(--f-stamp);letter-spacing:.07em;line-height:1}
+.hand{font-family:var(--f-hand);font-size:1.5rem;line-height:1.2}
+.text-graphite{color:var(--graphite)!important}
+.illu{filter:var(--illu-filter)}
+img{max-width:100%}
+section{padding-block:clamp(56px,8vw,104px);scroll-margin-top:72px}
+.dash{border:0;border-top:2px dashed var(--ink);opacity:.5}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+:focus-visible{outline:2px dashed var(--ink)!important;outline-offset:3px;box-shadow:none!important}
+
+/* buttons */
+.btn{--bs-btn-font-family:var(--f-stamp);font-family:var(--f-stamp);letter-spacing:.08em;font-size:1.15rem;line-height:1;padding:.8rem 1.4rem .65rem;border-radius:12px;border-width:2px}
+.btn-ink{background:var(--ink);color:var(--paper);border-color:var(--ink);box-shadow:4px 4px 0 var(--ash)}
+.btn-ink:hover,.btn-ink:focus-visible{background:var(--ink);color:var(--paper);border-color:var(--ink);transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--ash)}
+.btn-ink:active{transform:translate(2px,2px)!important;box-shadow:1px 1px 0 var(--ash)!important;background:var(--ink)!important;color:var(--paper)!important}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-line:hover,.btn-line:focus-visible,.btn-line.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-sm{font-size:1rem;padding:.5rem .9rem .4rem;border-radius:10px}
+
+/* navbar */
+.navbar{background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1.5px solid var(--rule);top:env(safe-area-inset-top,0px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:1031;background:var(--paper)}
+.navbar-brand img{height:22px;width:auto}
+.navbar-brand .sub{font-family:var(--f-display);font-size:.95rem;margin-left:8px;color:var(--ink)}
+.navbar .nav-link{white-space:nowrap;font-family:var(--f-stamp);letter-spacing:.08em;font-size:1.1rem;color:var(--ink);padding-inline:.8rem!important}
+.navbar .nav-link:hover{text-decoration:underline;text-decoration-style:dashed;text-underline-offset:6px}
+.navbar-toggler{border:2px solid var(--ink);border-radius:10px;padding:.35rem .55rem}
+.navbar-toggler-icon{background-image:none;position:relative;width:22px;height:2px;background:var(--ink);display:inline-block;vertical-align:middle}
+.navbar-toggler-icon::before,.navbar-toggler-icon::after{content:"";position:absolute;left:0;width:22px;height:2px;background:var(--ink)}
+.navbar-toggler-icon::before{top:-7px}.navbar-toggler-icon::after{top:7px}
+.night{display:inline-flex;align-items:center;gap:8px;background:transparent;border:2px solid var(--ink);border-radius:999px;padding:.35rem .8rem .3rem;color:var(--ink);font-family:var(--f-stamp);letter-spacing:.08em;font-size:1rem}
+.night svg{width:16px;height:16px}
+.night{white-space:nowrap}
+@media (max-width:440px){.navbar-brand .sub{display:none}}
+
+/* hero */
+.hero{padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(56px,7vw,96px);position:relative;overflow:hidden}
+.badge-ink{display:inline-flex;gap:8px;align-items:center;border:2px solid var(--ink);border-radius:999px;padding:.35rem .9rem .25rem;font-family:var(--f-stamp);letter-spacing:.08em;font-size:1rem}
+.badge-ink .dot{width:8px;height:8px;border-radius:50%;background:var(--ink);animation:blink 2.4s ease-in-out infinite}
+@keyframes blink{50%{opacity:.2}}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.3rem);font-weight:700;line-height:1.06;margin:22px 0 18px;letter-spacing:-.01em}
+.hero h1 .u{background:linear-gradient(transparent 68%,var(--cream) 68%,var(--cream) 92%,transparent 92%)}
+.hero .lead{font-size:1.15rem;max-width:36rem;color:var(--graphite)}
+.hero .by{margin-top:26px;display:flex;align-items:center;gap:12px;font-size:.95rem}
+.hero .by b{font-family:var(--f-display);font-size:1.05rem}
+.stage{position:relative;max-width:470px;margin-inline:auto;aspect-ratio:1/1.08}
+.stage .book{position:absolute;left:14%;top:2%;width:62%;border-radius:6px;box-shadow:16px 18px 0 -4px var(--shadow-ink);transform:rotate(-3deg);z-index:3;border:1px solid var(--rule)}
+.stage .card{position:absolute;width:36%;border-radius:12px;border:1px solid var(--rule);box-shadow:0 10px 24px rgba(0,0,0,.12);transition:transform .35s ease}
+.stage .c1{right:0;top:16%;transform:rotate(9deg);z-index:2}
+.stage .c2{right:6%;top:44%;transform:rotate(16deg);z-index:1}
+.stage .c3{left:0;bottom:0;transform:rotate(-11deg);z-index:4}
+.stage:hover .c1{transform:rotate(13deg) translate(10px,-6px)}
+.stage:hover .c2{transform:rotate(21deg) translate(14px,6px)}
+.stage:hover .c3{transform:rotate(-15deg) translate(-8px,6px)}
+.stage .scribble{position:absolute;right:-4px;bottom:6%;z-index:5;transform:rotate(-6deg);max-width:150px;text-align:center}
+
+/* stats */
+.stats{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);background:var(--sheet)}
+.stat{padding:26px 8px;display:flex;flex-direction:column;gap:6px;height:100%}
+.stat b{font-family:var(--f-stamp);font-weight:400;font-size:clamp(2.4rem,5vw,3.2rem);line-height:.9;letter-spacing:.02em}
+.stat span{font-size:.92rem;color:var(--graphite);line-height:1.4}
+.stats .col+.col .stat{border-left:1.5px dashed var(--rule)}
+@media (max-width:767.98px){.stats .col:nth-child(3) .stat{border-left:0}.stats .col:nth-child(n+3) .stat{border-top:1.5px dashed var(--rule)}}
+
+/* story */
+.story{background:var(--ink);color:var(--paper)}
+.story h2,.story .display{color:var(--paper)}
+.story p{font-family:var(--f-display);font-size:clamp(1.1rem,2vw,1.3rem);line-height:1.65;opacity:.92}
+.story .clock{font-family:var(--f-stamp);font-size:clamp(4rem,12vw,7.5rem);line-height:.9;letter-spacing:.04em;border:3px solid var(--paper);border-radius:22px;padding:18px 26px 8px;display:inline-block;font-variant-numeric:tabular-nums}
+.story .clock small{display:block;font-size:1.1rem;letter-spacing:.1em;opacity:.7;margin-bottom:6px}
+.story .thought{border:2px dashed var(--paper);border-radius:40px 40px 40px 8px;padding:14px 20px;font-family:var(--f-hand);font-size:1.45rem;line-height:1.2;display:inline-block}
+.story .btn-line{color:var(--paper);border-color:var(--paper)}
+.story .btn-line:hover{background:var(--paper);color:var(--ink)}
+
+/* puzzle */
+.puzzle{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:420px;margin-inline:auto}
+.piece{position:relative;aspect-ratio:1/1;border:2.5px solid var(--ink);background:var(--sheet);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--ink);font-family:var(--f-stamp);font-size:clamp(1.1rem,2.4vw,1.45rem);letter-spacing:.06em;line-height:1.05;text-align:center;padding:12px;transition:transform .2s ease,background .2s ease}
+.piece .q{font-family:var(--f-display);font-weight:700;font-size:2.4rem;line-height:1}
+.piece .k{font-family:var(--f-body);font-size:.75rem;letter-spacing:.06em;color:var(--graphite)}
+.piece::after{content:"";position:absolute;width:30px;height:30px;border-radius:50%;background:inherit;border:2.5px solid var(--ink);z-index:2}
+.piece.p1::after{right:-19px;top:calc(50% - 15px);clip-path:inset(0 0 0 50%)}
+.piece.p2::after{bottom:-19px;left:calc(50% - 15px);clip-path:inset(50% 0 0 0)}
+.piece.p3::after{top:-19px;left:calc(50% - 15px);clip-path:inset(0 0 50% 0)}
+.piece.p4::after{left:-19px;top:calc(50% - 15px);clip-path:inset(0 50% 0 0)}
+.piece:hover{transform:scale(1.02)}
+.piece.seen{background:var(--cream)}
+.piece.active{background:var(--ink);color:var(--paper)}
+.piece.active .k{color:var(--paper);opacity:.75}
+.piece-panel{border:2px solid var(--ink);border-radius:20px;background:var(--sheet);padding:28px;min-height:100%}
+.piece-panel .num{font-family:var(--f-stamp);letter-spacing:.08em;color:var(--graphite)}
+.piece-panel ul{padding-left:1.1em;margin:0}
+.piece-panel li{margin-bottom:6px}
+.progress-dots{display:flex;gap:8px}
+.progress-dots i{width:14px;height:14px;border-radius:50%;border:2px solid var(--ink);display:inline-block}
+.progress-dots i.on{background:var(--ink)}
+
+/* parts accordion */
+.accordion{--bs-accordion-bg:var(--sheet);--bs-accordion-border-color:var(--ink);--bs-accordion-border-width:1.5px;--bs-accordion-border-radius:18px;--bs-accordion-inner-border-radius:16px;--bs-accordion-btn-color:var(--ink);--bs-accordion-active-color:var(--ink);--bs-accordion-active-bg:var(--cream);--bs-accordion-btn-focus-box-shadow:none;--bs-accordion-color:var(--ink)}
+.accordion-button{font-family:var(--f-display);font-weight:600;font-size:1.15rem;gap:14px}
+.accordion-button .part{font-family:var(--f-stamp);font-weight:400;font-size:1.05rem;letter-spacing:.08em;border:1.5px solid currentColor;border-radius:8px;padding:4px 8px 2px;flex:none}
+.accordion-button::after{filter:var(--illu-filter)}
+.steps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.steps span{border:1.5px dashed var(--ink);border-radius:999px;padding:4px 12px;font-size:.88rem}
+
+/* cards */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters .btn{display:inline-flex;align-items:center;gap:8px}
+.filters img{width:20px;height:20px;object-fit:contain;filter:var(--illu-filter)}
+.filters .btn.active img{filter:invert(1)}
+:root[data-theme="dark"] .filters .btn.active img{filter:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .filters .btn.active img{filter:none}}
+.flip{perspective:1200px;background:none;border:0;padding:0;width:100%;display:block;text-align:left;cursor:pointer}
+.flip-inner{position:relative;width:100%;aspect-ratio:621/874;transition:transform .6s cubic-bezier(.3,.7,.2,1);transform-style:preserve-3d}
+.flip.flipped .flip-inner{transform:rotateY(180deg)}
+.flip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:14px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--rule);box-shadow:0 6px 16px rgba(0,0,0,.08);background:#EDF2F0}
+.flip .back{transform:rotateY(180deg)}
+.flip:hover .flip-inner{box-shadow:none}
+.cardmeta{display:flex;justify-content:space-between;gap:8px;margin-top:10px;font-size:.82rem;color:var(--graphite)}
+.cardmeta b{font-family:var(--f-stamp);font-weight:400;letter-spacing:.06em;font-size:1rem;color:var(--ink)}
+.hint{font-size:.85rem;color:var(--graphite)}
+.ritual-box{border:2px solid var(--ink);border-radius:22px;background:var(--cream);padding:clamp(20px,3vw,32px)}
+.ritual-slot{display:flex;flex-direction:column;gap:10px}
+.ritual-slot .lbl{font-family:var(--f-stamp);letter-spacing:.08em;font-size:1.15rem}
+.ritual-slot .flip{max-width:280px}
+.ritual-slot .eff{font-size:.92rem}
+.empty-card{aspect-ratio:621/874;border:2px dashed var(--ink);border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;max-width:280px;font-family:var(--f-hand);font-size:1.4rem;line-height:1.15;color:var(--graphite)}
+.shuffle{animation:shuffle .5s ease}
+@keyframes shuffle{0%{transform:rotate(-6deg) translateY(10px);opacity:.2}100%{transform:none;opacity:1}}
+
+/* look inside */
+.peek{background:var(--sheet);border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)}
+.carousel{max-width:520px;margin-inline:auto}
+.carousel-item img{border-radius:8px;border:1px solid var(--rule);box-shadow:14px 16px 0 -4px var(--shadow-ink);margin:0 auto;display:block;max-height:640px;width:auto}
+.carousel-control-prev,.carousel-control-next{width:48px;height:48px;top:calc(50% - 24px);background:var(--ink);border-radius:50%;opacity:1}
+.carousel-control-prev{left:-12px}.carousel-control-next{right:-12px}
+.carousel-control-prev-icon,.carousel-control-next-icon{width:1.2rem;height:1.2rem;filter:none}
+:root[data-theme="dark"] .carousel-control-prev-icon,:root[data-theme="dark"] .carousel-control-next-icon{filter:invert(1)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .carousel-control-prev-icon,:root:not([data-theme="light"]) .carousel-control-next-icon{filter:invert(1)}}
+.carousel-caption-out{text-align:center;margin-top:26px;min-height:3.2em}
+.carousel-caption-out b{font-family:var(--f-stamp);letter-spacing:.08em;font-weight:400;font-size:1.2rem;display:block}
+.thumbs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.thumbs button{width:12px;height:12px;border-radius:50%;border:2px solid var(--ink);background:transparent;padding:0}
+.thumbs button.active{background:var(--ink)}
+
+/* quiz */
+.quiz-card{border:2px solid var(--ink);border-radius:22px;background:var(--sheet);padding:clamp(22px,3vw,34px);position:relative}
+.quiz-card .count{font-family:var(--f-stamp);letter-spacing:.08em;color:var(--graphite)}
+.quiz-card .stmt{font-family:var(--f-display);font-size:clamp(1.35rem,2.6vw,1.8rem);font-weight:600;line-height:1.3;margin:12px 0 22px;quotes:"„" "“"}
+.verdict{display:none;margin-top:20px;padding-top:18px;border-top:2px dashed var(--ink)}
+.verdict.show{display:block}
+.verdict .v{font-family:var(--f-stamp);font-size:1.6rem;letter-spacing:.06em}
+.quiz-score{font-family:var(--f-hand);font-size:1.5rem}
+
+/* author */
+.portrait{aspect-ratio:4/5;border:2.5px dashed var(--ink);border-radius:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center;background:var(--sheet)}
+.portrait img{width:58%}
+.portrait span{font-family:var(--f-hand);font-size:1.35rem;color:var(--graphite)}
+.quote-tape{position:relative;background:var(--sheet);border:1.5px solid var(--ink);padding:22px 24px;transform:rotate(-1deg);font-family:var(--f-display);font-style:italic;font-size:1.15rem;line-height:1.55}
+.quote-tape::before{content:"";position:absolute;width:84px;height:22px;background:var(--cream);border:1px solid var(--ash);top:-12px;left:50%;transform:translateX(-50%) rotate(2deg)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.facts div{border-top:2px solid var(--ink);padding-top:10px;font-size:.92rem}
+.facts b{display:block;font-family:var(--f-stamp);font-weight:400;font-size:1.25rem;letter-spacing:.06em}
+@media (max-width:575.98px){.facts{grid-template-columns:minmax(0,1fr)}}
+
+/* waitlist */
+.waitlist{background:var(--ink);color:var(--paper)}
+.waitlist h2{color:var(--paper)}
+.waitlist .form-card{background:var(--paper);color:var(--ink);border-radius:22px;padding:clamp(22px,3vw,34px);border:2px solid var(--paper)}
+.form-label{font-family:var(--f-stamp);letter-spacing:.08em;font-size:1.05rem;margin-bottom:6px}
+.form-control,.form-select{background-color:var(--sheet);color:var(--ink);border:2px solid var(--ink);border-radius:12px;padding:.7rem .9rem}
+.form-control:focus,.form-select:focus{background-color:var(--sheet);color:var(--ink);border-color:var(--ink);box-shadow:4px 4px 0 var(--ash)}
+.form-control::placeholder{color:var(--graphite);opacity:.7}
+.form-check-input{border:2px solid var(--ink);background-color:var(--sheet)}
+.form-check-input:checked{background-color:var(--ink);border-color:var(--ink)}
+.form-select{--bs-form-select-bg-img:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+.offer{display:flex;flex-direction:column;gap:14px}
+.offer li{display:grid;grid-template-columns:28px 1fr;gap:6px;opacity:.92}
+.offer li::before{content:"✔";font-weight:700}
+.offer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.ok-msg{border:2px dashed var(--ink);border-radius:16px;padding:22px;text-align:center}
+.ok-msg .hand{font-size:1.8rem}
+
+/* shop */
+.shop{padding-top:clamp(48px,6vw,80px)}
+.fund{border:2px solid var(--ink);border-radius:20px;background:var(--sheet);padding:20px 24px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 24px;align-items:center}
+.fund .bar{grid-column:1/-1;height:16px;border:2px solid var(--ink);border-radius:999px;overflow:hidden;background:var(--paper)}
+.fund .bar i{display:block;height:100%;background:repeating-linear-gradient(-45deg,var(--ink) 0 6px,var(--graphite) 6px 9px);border-radius:999px;transition:width .6s ease}
+.fund b{font-family:var(--f-stamp);font-weight:400;font-size:1.6rem;letter-spacing:.04em;line-height:1}
+.fund small{color:var(--graphite)}
+.demo-tag{font-family:var(--f-hand);font-size:1.1rem;color:var(--graphite)}
+.product{border:2px solid var(--ink);border-radius:24px;background:var(--sheet);padding:clamp(20px,2.6vw,30px);display:flex;flex-direction:column;gap:16px;height:100%;position:relative}
+.product.featured{background:var(--cream);box-shadow:8px 8px 0 var(--ink)}
+.product .ribbon{position:absolute;top:-15px;right:22px;background:var(--ink);color:var(--paper);font-family:var(--f-stamp);letter-spacing:.08em;padding:6px 12px 4px;border-radius:8px;font-size:1rem}
+.product .pic{height:230px;display:flex;align-items:center;justify-content:center;position:relative}
+.product .pic .b{height:100%;width:auto;border-radius:4px;border:1px solid var(--rule);box-shadow:8px 10px 0 -2px var(--shadow-ink);transform:rotate(-2deg)}
+.product .pic .k{position:absolute;height:62%;border-radius:8px;border:1px solid var(--rule);box-shadow:0 8px 18px rgba(0,0,0,.15)}
+.product .pic .k1{right:12%;bottom:0;transform:rotate(10deg)}
+.product .pic .k2{right:20%;bottom:6%;transform:rotate(-3deg)}
+.product .pic.with-cards .b{transform:rotate(-4deg) translateX(-18%)}
+.product h3{font-size:1.5rem;margin:0}
+.product ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:.95rem}
+.product li{display:grid;grid-template-columns:22px 1fr}
+.product li::before{content:"✔";font-weight:700}
+.price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.price b{font-family:var(--f-stamp);font-weight:400;font-size:2.8rem;line-height:.9;letter-spacing:.02em}
+.price s{color:var(--graphite);font-size:1rem}
+.price .save{font-family:var(--f-stamp);letter-spacing:.06em;border:1.5px dashed var(--ink);border-radius:6px;padding:3px 7px 1px;font-size:.95rem}
+.qty{display:inline-flex;align-items:center;border:2px solid var(--ink);border-radius:12px;overflow:hidden;height:46px}
+.qty button{width:40px;height:100%;border:0;background:transparent;color:var(--ink);font-size:1.3rem;line-height:1}
+.qty button:hover{background:var(--ink);color:var(--paper)}
+.qty output{min-width:34px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.buyrow{display:flex;gap:10px;align-items:center;margin-top:auto;flex-wrap:wrap}
+.buyrow .btn{flex:1 1 180px}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.how div{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;font-size:.93rem}
+.how span{width:44px;height:44px;border-radius:50%;border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--f-stamp);font-size:1.4rem;padding-top:3px}
+.how b{display:block;font-family:var(--f-display);font-size:1.05rem}
+@media (max-width:767.98px){.how{grid-template-columns:minmax(0,1fr)}.fund{grid-template-columns:minmax(0,1fr)}}
+.cartbtn{position:relative;display:inline-flex;align-items:center;gap:8px;background:transparent;border:2px solid var(--ink);border-radius:12px;padding:.42rem .8rem .36rem;color:var(--ink);font-family:var(--f-stamp);letter-spacing:.08em;font-size:1rem}
+.cartbtn svg{width:18px;height:18px}
+.cartbtn .n{background:var(--ink);color:var(--paper);border-radius:999px;min-width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:.9rem;padding:2px 6px 0}
+.cartbtn.bump{animation:bump .4s ease}
+@keyframes bump{40%{transform:scale(1.12)}}
+.offcanvas{--bs-offcanvas-bg:var(--paper);--bs-offcanvas-color:var(--ink);--bs-offcanvas-width:440px;border-left:2px solid var(--ink)!important}
+.offcanvas-header{border-bottom:2px dashed var(--rule);padding-top:calc(1rem + env(safe-area-inset-top,0px))}
+.offcanvas-title{font-family:var(--f-display);font-weight:700}
+.btn-close{filter:var(--illu-filter)}
+.line{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule)}
+.line img{width:56px;border-radius:4px;border:1px solid var(--rule)}
+.line b{font-family:var(--f-display);display:block;line-height:1.25}
+.line small{color:var(--graphite)}
+.line .qty{height:36px}.line .qty button{width:32px}
+.totals{display:flex;flex-direction:column;gap:6px;font-size:.95rem;padding:14px 0}
+.totals div{display:flex;justify-content:space-between;gap:12px}
+.totals .sum{font-family:var(--f-stamp);font-size:1.6rem;letter-spacing:.04em;border-top:2px solid var(--ink);padding-top:10px;margin-top:4px}
+.ship{display:flex;flex-direction:column;gap:8px}
+.ship label{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;border:2px solid var(--rule);border-radius:12px;padding:10px 12px;cursor:pointer;font-size:.93rem}
+.ship input:checked+span{font-weight:700}
+.ship label:has(input:checked){border-color:var(--ink);background:var(--sheet)}
+.cart-empty{text-align:center;padding:30px 10px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.cart-empty img{width:150px}
+.stepper{display:flex;gap:6px;font-family:var(--f-stamp);letter-spacing:.08em;font-size:.95rem;color:var(--graphite);margin-bottom:6px}
+.stepper .on{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:1020;background:var(--ink);color:var(--paper);display:none;align-items:center;justify-content:space-between;gap:12px;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.sticky-buy .btn{background:var(--paper);color:var(--ink);border-color:var(--paper);box-shadow:none}
+.sticky-buy b{font-family:var(--f-stamp);font-weight:400;letter-spacing:.06em;font-size:1.15rem}
+@media (max-width:991.98px){.sticky-buy.show{display:flex}}
+
+/* faq + footer */
+footer{border-top:1.5px solid var(--ink);padding-block:40px;font-size:.9rem}
+footer img{height:20px;width:auto}
+.preview-note{font-size:.8rem;color:var(--graphite)}
+@media (max-width:991.98px){footer{padding-bottom:96px}}
+</style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top py-2">
+  <div class="container-xl gutter">
+    <a class="navbar-brand d-flex align-items-center" href="#top" aria-label="Tajemství kvalitního spánku – domů"><img class="illu" src="img/wordmark.png" alt="TAJEMSTVÍ"><span class="sub">kvalitního <b>spánku.</b></span></a>
+    <button class="cartbtn d-lg-none ms-auto me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#cart" aria-controls="cart" aria-label="Košík"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.2 12.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg><span class="n cart-n">0</span></button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Otevřít menu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center py-3 py-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#obchod">Předprodej</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kniha">O knize</a></li>
+        <li class="nav-item"><a class="nav-link" href="#karticky">Kartičky</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ukazka">Ukázka</a></li>
+        <li class="nav-item"><a class="nav-link" href="#myty">Mýty</a></li>
+        <li class="nav-item"><a class="nav-link" href="#autorka">Autorka</a></li>
+        <li class="nav-item ms-lg-2 my-2 my-lg-0"><button class="night" id="nightBtn" type="button" aria-pressed="false" title="Večerní režim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><span id="nightLbl" class="d-lg-none d-xxl-inline">Večerní režim</span></button></li>
+        <li class="nav-item ms-lg-3 d-none d-lg-flex gap-2 align-items-center"><a class="btn btn-ink btn-sm" href="#obchod">Předobjednat</a><button class="cartbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#cart" aria-controls="cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.2 12.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>Košík <span class="n cart-n">0</span></button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero gutter" id="top">
+  <div class="container-xl">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <span class="badge-ink"><span class="dot"></span>Předprodej je otevřený</span>
+        <h1>Kniha o spánku, <span class="u">u které neusneš.</span></h1>
+        <p class="lead">Přes den padáš únavou, ale když jdeš večer spát, převaluješ se v posteli a spánek nikde? Tenhle hravý a praktický průvodce ti pomůže porozumět spánku a pochopit, co brání ve spánku právě tobě.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a class="btn btn-ink" href="#obchod">Předobjednat od 449 Kč</a>
+          <a class="btn btn-line" href="#ukazka">Nahlédnout do knihy</a>
+        </div>
+        <div class="by"><img class="illu" src="img/ico-mysl.png" alt="" width="38" height="32" style="object-fit:contain"><div><b>Veronika Hylánová, MSc.</b><br><span class="text-graphite">psycholožka · kniha + 33 kartiček večerních rituálů</span></div></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="stage">
+          <img class="card c2" src="img/cards/c-05.jpg" alt="" loading="eager">
+          <img class="card c1" src="img/cards/c-03.jpg" alt="" loading="eager">
+          <img class="book" src="img/cover.jpg" alt="Obálka knihy Tajemství kvalitního spánku">
+          <img class="card c3" src="img/cards/c-01.jpg" alt="Kartička Progresivní svalová relaxace">
+        </div>
+        <p class="hand text-center mt-4 mb-0">+ 33 kartiček na noční stolek</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="stats gutter">
+  <div class="container-xl">
+    <div class="row row-cols-2 row-cols-md-4 g-0">
+      <div class="col"><div class="stat"><b>1/3</b><span>dospělých zažije během roku přechodné potíže se spánkem</span></div></div>
+      <div class="col"><div class="stat"><b>10–15 %</b><span>lidí trpí chronickou nespavostí</span></div></div>
+      <div class="col"><div class="stat"><b>134</b><span>vědeckých zdrojů, o které se kniha opírá</span></div></div>
+      <div class="col"><div class="stat"><b>33</b><span>kartiček s rituály na večer a před spaním</span></div></div>
+    </div>
+  </div>
+</div>
+
+<section id="obchod" class="shop gutter" aria-labelledby="shopH">
+  <div class="container-xl">
+    <div class="row gy-4 mb-4 align-items-end">
+      <div class="col-lg-7"><p class="stamp text-graphite mb-2" style="font-size:1.1rem">Předprodej</p><h2 id="shopH">Předobjednej a pomoz knihu vytisknout</h2></div>
+      <div class="col-lg-5"><p class="text-graphite mb-0">Kniha vychází vlastním nákladem. Každá předobjednávka jde přímo na tisk prvního nákladu. Za to dostaneš nižší cenu a knihu mezi prvními.</p></div>
+    </div>
+    <div class="fund mb-5" aria-label="Stav předprodeje">
+      <div><b><span id="fundN">127</span> / 300</b> <span class="text-graphite">předobjednávek do spuštění tisku</span></div>
+      <span class="demo-tag">ukázková data</span>
+      <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="300" aria-valuenow="127" id="fundBar"><i style="width:42%"></i></div>
+      <small>Předprodej končí, jakmile se vybere první náklad. Pak jde kniha do tisku.</small>
+    </div>
+    <div class="row g-4 g-lg-5">
+      <div class="col-md-6">
+        <article class="product">
+          <div class="pic"><img class="b" src="img/cover.jpg" alt="Kniha Tajemství kvalitního spánku"></div>
+          <div><p class="stamp text-graphite mb-1">Varianta 1</p><h3>Kniha</h3></div>
+          <ul><li>Tištěná kniha 17,6 × 25 cm, 135 stran</li><li>4 části: teorie, 4 díly skládačky, vlastní plán, bonus pro páry a rodiče</li><li>Cvičení a záznamníky přímo v knize</li></ul>
+          <div class="price"><b>449 Kč</b><s>499 Kč</s><span class="save">−50 Kč v předprodeji</span></div>
+          <div class="buyrow"><div class="qty" data-for="kniha"><button type="button" data-d="-1" aria-label="Méně">−</button><output>1</output><button type="button" data-d="1" aria-label="Více">+</button></div><button class="btn btn-line add" type="button" data-id="kniha">Přidat do košíku</button></div>
+        </article>
+      </div>
+      <div class="col-md-6">
+        <article class="product featured">
+          <span class="ribbon">Doporučujeme</span>
+          <div class="pic with-cards"><img class="b" src="img/cover.jpg" alt="Kniha"><img class="k k2" src="img/cards/c-05.jpg" alt=""><img class="k k1" src="img/cards/c-01.jpg" alt="Kartičky rituálů"></div>
+          <div><p class="stamp text-graphite mb-1">Varianta 2</p><h3>Kniha + 33 kartiček</h3></div>
+          <ul><li>Vše z varianty 1</li><li>33 kartiček večerních rituálů (A6) v krabičce</li><li>Věnování od autorky zdarma (jen v předprodeji)</li></ul>
+          <div class="price"><b>699 Kč</b><s>799 Kč</s><span class="save">−100 Kč v předprodeji</span></div>
+          <div class="buyrow"><div class="qty" data-for="sada"><button type="button" data-d="-1" aria-label="Méně">−</button><output>1</output><button type="button" data-d="1" aria-label="Více">+</button></div><button class="btn btn-ink add" type="button" data-id="sada">Přidat do košíku</button></div>
+        </article>
+      </div>
+    </div>
+    <div class="how mt-5">
+      <div><span>1</span><p class="mb-0"><b>Předobjednáš</b>Zaplatíš teď za předprodejní cenu.</p></div>
+      <div><span>2</span><p class="mb-0"><b>Vytiskneme</b>Jakmile se vybere první náklad, jde kniha do tisku. Průběh posíláme e-mailem.</p></div>
+      <div><span>3</span><p class="mb-0"><b>Odešleme</b>Předobjednávky odcházejí jako první. Když se tisk nevybere, peníze vrátíme.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="story gutter" aria-labelledby="storyH">
+  <div class="container-xl">
+    <div class="row gy-5 align-items-center">
+      <div class="col-lg-5 text-center text-lg-start">
+        <div class="clock" aria-live="polite"><small>Zbývá do budíku</small><span id="clock">6:00</span></div>
+        <div class="mt-4"><span class="thought" id="thought">„Co že to po mně chtěl šéf?“</span></div>
+        <div class="mt-4"><button class="btn btn-line btn-sm" id="snooze" type="button">Posunout budík o 10 minut</button></div>
+      </div>
+      <div class="col-lg-7">
+        <p class="stamp text-uppercase mb-3" style="opacity:.7;font-size:1.1rem">Ukázka z úvodu</p>
+        <h2 id="storyH" class="mb-4">Zní to povědomě?</h2>
+        <p>Ležíš večer v posteli, převaluješ se z boku na bok. Podíváš se na hodiny a zjistíš, že za šest hodin vstáváš a už hodinu se marně snažíš usnout. Jenže právě dnes se potřebuješ pořádně vyspat, protože tě čeká náročný den.</p>
+        <p class="mt-3">Po několika vnitřních rozhovorech a projití si celého seznamu úkolů se znovu podíváš na hodiny. A tak se snažíš usnout o to víc. <b>Jenže čím víc spánek naháníš, tím víc se ti vzdaluje.</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kniha" class="gutter" aria-labelledby="pzH">
+  <div class="container-xl">
+    <div class="row gy-4 mb-4 mb-lg-5 align-items-end">
+      <div class="col-lg-7"><p class="stamp text-graphite mb-2" style="font-size:1.1rem">O knize</p><h2 id="pzH">4 díly = 1 celek</h2></div>
+      <div class="col-lg-5"><p class="text-graphite mb-0">Tajemství kvalitního spánku spočívá ve čtyřech dílech jedné skládačky. Když je poskládáš dohromady, vznikne celek, který ti konečně přinese opravdový odpočinek. Klikni na dílek.</p></div>
+    </div>
+    <div class="row gy-4 align-items-stretch">
+      <div class="col-lg-5">
+        <div class="puzzle" role="tablist" aria-label="Čtyři díly skládačky">
+          <button class="piece p1 active" type="button" role="tab" aria-selected="true" data-p="0"><span class="k">DÍL Č. 1</span>Nastavení<br>mysli</button>
+          <button class="piece p2" type="button" role="tab" aria-selected="false" data-p="1"><span class="q">?</span><span class="k">DÍL Č. 2</span></button>
+          <button class="piece p3" type="button" role="tab" aria-selected="false" data-p="2"><span class="q">?</span><span class="k">DÍL Č. 3</span></button>
+          <button class="piece p4" type="button" role="tab" aria-selected="false" data-p="3"><span class="q">?</span><span class="k">DÍL Č. 4</span></button>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="piece-panel" role="tabpanel" aria-live="polite">
+          <div class="d-flex justify-content-between align-items-center mb-3"><span class="num" id="pNum">DÍL Č. 1</span><span class="progress-dots" id="pDots"><i class="on"></i><i></i><i></i><i></i></span></div>
+          <h3 class="mb-3" id="pTitle">Nastavení mysli</h3>
+          <p id="pText"></p>
+          <ul id="pList" class="mt-3"></ul>
+          <p class="hand mt-3 mb-0" id="pDone" hidden>Hotovo! Celek je složený. Teď už jen přidat vlastní plán.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row gy-4 mt-5 pt-lg-3">
+      <div class="col-lg-4">
+        <h3 class="h2 mb-3" style="font-size:clamp(1.6rem,3vw,2.1rem)">Co v knize najdeš</h3>
+        <p class="text-graphite">Stručná teorie, žádné zahlcení. Hlavní je praxe: cvičení, záznamníky a vlastní plán nových návyků. Každá stránka má navíc vlastní grafické zpracování. Mozek tak zbystří a lépe si zapamatuje, co čteš.</p>
+        <img class="illu d-none d-lg-block mt-4" src="img/handshake.png" alt="" style="width:80%">
+      </div>
+      <div class="col-lg-8">
+        <div class="accordion" id="parts">
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1"><span class="part">Část I</span>Jak spánek funguje</button></h3>
+            <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#parts"><div class="accordion-body">Stručně a srozumitelně: historie spánku, spánková architektura, mýty a polopravdy a co víme o spánku dnes. Kontext, aby další kroky stály na pevném základě.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2"><span class="part">Část II</span>Čtyři díly skládačky</button></h3>
+            <div id="a2" class="accordion-collapse collapse" data-bs-parent="#parts"><div class="accordion-body">Nastavení mysli, večerní návyky, životní styl a prostředí spánku. Bludný kruh nespavosti, záznamník myšlenek, kolo emocí, večerní režim, tělesné hodiny i spánkové pomůcky.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3"><span class="part">Část III</span>Tvůj vlastní plán</button></h3>
+            <div id="a3" class="accordion-collapse collapse" data-bs-parent="#parts"><div class="accordion-body">Skutečná změna přichází až s konkrétními kroky. Cvičení, která pomohou určit priority, a návod, jak zajistit, aby byla změna realistická a dlouhodobě udržitelná.
+              <div class="steps"><span>Poznej svůj spánek</span>→<span>Vyber prioritu</span>→<span>Zvol změnu</span>→<span>Vytvoř návyk</span></div></div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4"><span class="part">Bonus</span>Pro páry a rodiče</button></h3>
+            <div id="a4" class="accordion-collapse collapse" data-bs-parent="#parts"><div class="accordion-body d-flex gap-3 align-items-center flex-wrap flex-sm-nowrap"><div>Praktická cvičení a tipy pro páry, které sdílejí ložnici. Rady pro rodiče, kteří řeší svůj spánek i spánek svých dětí: spánková hygiena pro miminka a batolata, bílý šum i spánkový trénink.</div><img class="illu" src="img/couple.png" alt="" style="width:120px;flex:none"></div></div>
+          </div>
+        </div>
+        <p class="text-graphite mt-3 mb-0" style="font-size:.9rem">Kniha z velké části vychází z kognitivně-behaviorální terapie nespavosti (KBT-I), tedy přístupu, který odborníci doporučují jako první volbu léčby chronické nespavosti.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="karticky" class="gutter pt-0" aria-labelledby="cardsH">
+  <div class="container-xl">
+    <hr class="dash mb-5">
+    <div class="row gy-4 mb-4 align-items-end">
+      <div class="col-lg-7"><p class="stamp text-graphite mb-2" style="font-size:1.1rem">Kartičky</p><h2 id="cardsH">33 rituálů na klidný večer</h2></div>
+      <div class="col-lg-5"><p class="text-graphite mb-0">Vyber si dvě kartičky: jednu s rituálem během večera a jednu před spaním. Můžeš losovat, nebo vybírat cíleně podle toho, jaký byl tvůj den.</p></div>
+    </div>
+
+    <div class="ritual-box mb-5">
+      <div class="row gy-4 align-items-center">
+        <div class="col-lg-4">
+          <h3 class="mb-2" style="font-size:1.6rem">Vylosuj si dnešní večer</h3>
+          <p class="text-graphite">Při úzkosti sáhni po kategorii Mysl nebo Vizualizace, při napětí v těle po Tělo, při neklidu po Dech.</p>
+          <div class="d-flex flex-wrap gap-2 mb-3" id="mood" role="group" aria-label="Jak se dnes cítíš">
+            <button class="btn btn-line btn-sm active" data-mood="" type="button">Je mi to jedno</button>
+            <button class="btn btn-line btn-sm" data-mood="mysl,vizualizace" type="button">Hlava jede</button>
+            <button class="btn btn-line btn-sm" data-mood="tělo" type="button">Napětí v těle</button>
+            <button class="btn btn-line btn-sm" data-mood="dech" type="button">Neklid</button>
+          </div>
+          <button class="btn btn-ink" id="drawBtn" type="button">Vylosovat kartičky</button>
+        </div>
+        <div class="col-sm-6 col-lg-4"><div class="ritual-slot" id="slotV"><span class="lbl">Během večera</span><div class="empty-card">Tady se objeví rituál na večer</div></div></div>
+        <div class="col-sm-6 col-lg-4"><div class="ritual-slot" id="slotS"><span class="lbl">Před spaním</span><div class="empty-card">A tady ten před spaním</div></div></div>
+      </div>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-between gap-3 align-items-center mb-4">
+      <div class="filters" id="catFilters" role="group" aria-label="Filtr kategorií">
+        <button class="btn btn-line btn-sm active" data-cat="" type="button">Vše</button>
+        <button class="btn btn-line btn-sm" data-cat="tělo" type="button"><img src="img/ico-telo.png" alt="">Tělo</button>
+        <button class="btn btn-line btn-sm" data-cat="dech" type="button"><img src="img/ico-dech.png" alt="">Dech</button>
+        <button class="btn btn-line btn-sm" data-cat="mysl" type="button"><img src="img/ico-mysl.png" alt="">Mysl</button>
+        <button class="btn btn-line btn-sm" data-cat="smysly" type="button"><img src="img/ico-smysly.png" alt="">Smysly</button>
+        <button class="btn btn-line btn-sm" data-cat="vizualizace" type="button"><img src="img/ico-vizualizace.png" alt="">Vizualizace</button>
+      </div>
+      <div class="filters" id="whenFilters" role="group" aria-label="Kdy">
+        <button class="btn btn-line btn-sm active" data-when="" type="button">Kdykoli</button>
+        <button class="btn btn-line btn-sm" data-when="vecer" type="button">Během večera</button>
+        <button class="btn btn-line btn-sm" data-when="spani" type="button">Před spaním</button>
+      </div>
+    </div>
+    <p class="hint mb-3"><span id="cardCount">33</span> kartiček · klikni na kartičku a otoč ji</p>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-md-4" id="cardGrid"></div>
+  </div>
+</section>
+
+<section id="ukazka" class="peek gutter" aria-labelledby="peekH">
+  <div class="container-xl">
+    <div class="row gy-5 align-items-center">
+      <div class="col-lg-4">
+        <p class="stamp text-graphite mb-2" style="font-size:1.1rem">Ukázka</p>
+        <h2 id="peekH" class="mb-3">Nahlédni do knihy</h2>
+        <p class="text-graphite">Možná sis už všiml/a, že tahle knížka vypadá trochu jinak, než bývá zvykem. Každá stránka má vlastní grafické zpracování a uspořádání. Když se vzhled stránky změní, mozek zbystří a začne textu věnovat větší pozornost.</p>
+        <p class="hand mt-3">Listuj šipkami →</p>
+      </div>
+      <div class="col-lg-8">
+        <div id="pages" class="carousel slide" data-bs-ride="false" data-bs-touch="true">
+          <div class="carousel-inner" id="pagesInner"></div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#pages" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Předchozí</span></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#pages" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Další</span></button>
+        </div>
+        <div class="carousel-caption-out" aria-live="polite"><b id="pageTitle"></b><span class="text-graphite" id="pageDesc"></span></div>
+        <div class="thumbs" id="pageDots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="myty" class="gutter" aria-labelledby="mythH">
+  <div class="container-xl">
+    <div class="row gy-5 align-items-center">
+      <div class="col-lg-5">
+        <p class="stamp text-graphite mb-2" style="font-size:1.1rem">Mini kvíz</p>
+        <h2 id="mythH" class="mb-3">Mýtus, nebo pravda?</h2>
+        <p class="text-graphite">Mnoho populárních rad o spánku vzniká z jednotlivých studií, zjednodušených závěrů nebo marketingových sdělení. Otestuj se. Vysvětlení je přímo z knihy.</p>
+        <img class="illu d-none d-lg-block mt-4" src="img/puzzle.png" alt="" style="width:62%">
+      </div>
+      <div class="col-lg-7">
+        <div class="quiz-card" id="quiz">
+          <div class="d-flex justify-content-between"><span class="count" id="qCount">1 / 6</span><span class="count" id="qScore">Skóre 0</span></div>
+          <p class="stmt" id="qText"></p>
+          <div class="d-flex flex-wrap gap-2" id="qBtns">
+            <button class="btn btn-line" data-a="myth" type="button">Mýtus</button>
+            <button class="btn btn-line" data-a="true" type="button">Pravda</button>
+          </div>
+          <div class="verdict" id="qVerdict" aria-live="polite"><span class="v" id="qV"></span><p class="mt-2 mb-3" id="qExp"></p><button class="btn btn-ink btn-sm" id="qNext" type="button">Další otázka</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="autorka" class="gutter pt-0" aria-labelledby="authH">
+  <div class="container-xl">
+    <hr class="dash mb-5">
+    <div class="row gy-5 align-items-center">
+      <div class="col-md-5 col-lg-4">
+        <div class="portrait"><img class="illu" src="img/hero-figure.png" alt=""><span>Sem patří portrét autorky</span></div>
+      </div>
+      <div class="col-md-7 col-lg-7 offset-lg-1">
+        <p class="stamp text-graphite mb-2" style="font-size:1.1rem">Autorka</p>
+        <h2 id="authH" class="mb-3">Veronika Hylánová, MSc.</h2>
+        <p>Psychologii vystudovala na výzkumné univerzitě v Nizozemsku, kde si vypěstovala vášeň pro vědu i respekt k její komplexitě. Proto v knize nenajdeš fráze jako „stoprocentně prokázané“. Spíš „může pomoci“ nebo „výzkumy naznačují“. Žádná studie totiž není absolutní pravda pro každého.</p>
+        <div class="quote-tape my-4">Kvalitní spánek nevzniká tlakem, snahou ani dokonalým plánem. Je to proces, který se děje sám, když to tělu a mysli dovolíš.</div>
+        <div class="facts">
+          <div><b>KBT-I</b>základ metod v knize</div>
+          <div><b>134 zdrojů</b>v seznamu literatury</div>
+          <div><b>Bez strašení</b>a bez zázračných slibů</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="predprodej" class="waitlist gutter" aria-labelledby="wlH">
+  <div class="container-xl">
+    <div class="row gy-5 align-items-center">
+      <div class="col-lg-6 offer">
+        <p class="stamp mb-0" style="opacity:.7;font-size:1.1rem">Předprodej</p>
+        <h2 id="wlH">Dnes večer můžeš začít</h2>
+        <p style="opacity:.9">Předobjednej knihu za nižší cenu a pomoz ji poslat do tisku. Kdo objedná v předprodeji, dostane knihu jako první.</p>
+        <div class="d-flex flex-wrap gap-3"><a class="btn" href="#obchod" style="background:var(--paper);color:var(--ink);border-color:var(--paper)">Vybrat variantu</a></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-card">
+          <p class="stamp mb-1" style="font-size:1.2rem">Ještě se rozmýšlíš?</p>
+          <p class="text-graphite mb-3" style="font-size:.95rem">Pošleme ti 3 kartičky rituálů zdarma a dáme vědět, než předprodej skončí.</p>
+          <form id="wlForm" novalidate>
+            <div class="mb-3"><label class="form-label" for="wlEmail">E-mail</label><input class="form-control" id="wlEmail" name="email" type="email" autocomplete="email" placeholder="tvuj@email.cz" required><div class="invalid-feedback">Zadej prosím e-mail ve tvaru jmeno@domena.cz.</div></div>
+            <div class="form-check mb-4"><input class="form-check-input" type="checkbox" id="wlOk" required><label class="form-check-label" for="wlOk">Souhlasím se zasíláním novinek o knize. Odhlásit se můžu kdykoli.</label><div class="invalid-feedback">Bez souhlasu ti nemůžeme psát.</div></div>
+            <button class="btn btn-ink w-100" type="submit">Poslat kartičky zdarma</button>
+            <p class="preview-note mt-3 mb-0">Náhled webu: formulář zatím nikam neodesílá.</p>
+          </form>
+          <div class="ok-msg" id="wlOkMsg" hidden><p class="hand mb-2">Díky, jsi na seznamu!</p><p class="mb-0">Kartičky ti dorazí do e-mailu. Do té doby si vylosuj dnešní večerní rituál.</p><a class="btn btn-line btn-sm mt-3" href="#karticky">K&nbsp;losování kartiček</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="gutter" aria-labelledby="faqH">
+  <div class="container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4"><p class="stamp text-graphite mb-2" style="font-size:1.1rem">Časté otázky</p><h2 id="faqH">Než se zeptáš</h2><img class="illu d-none d-lg-block mt-4" src="img/sign-figure.png" alt="" style="height:220px;width:auto"></div>
+      <div class="col-lg-8">
+        <div class="accordion" id="faqAcc">
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f1" aria-expanded="false" aria-controls="f1">Pro koho je kniha určená?</button></h3><div id="f1" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Pro každého, kdo chce pochopit, jak spánek opravdu funguje, a zjistit, co brání usnout právě jemu. Ať už bojuješ s nespavostí a cítíš se dlouhodobě nevyspalý/á, nebo chceš kvalitu svého spánku ještě zlepšit.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2" aria-expanded="false" aria-controls="f2">Nahradí kniha návštěvu lékaře?</button></h3><div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Ne. Kniha nenahrazuje odbornou zdravotní péči a neslouží k diagnostice ani léčbě. V určitých případech je lepší obrátit se na odborníka. Kniha má proto samostatnou kapitolu „Kdy vyhledat odbornou pomoc“.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3" aria-expanded="false" aria-controls="f3">Jak se kartičky používají?</button></h3><div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Na líci najdeš kategorii, kdy rituál dělat a za jak dlouho můžeš čekat výsledky. Na rubu je vysvětlení, postup, tip a efekt. Vyber si jednu kartičku na večer a jednu před spaním, sleduj, co ti pomáhá, a postupně si sestav vlastní balíček.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4" aria-expanded="false" aria-controls="f4">Jak funguje předprodej a kdy knihu dostanu?</button></h3><div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Kniha vychází vlastním nákladem, takže první náklad financují předobjednávky. Jakmile se vybere, jde kniha do tisku a předobjednávky odešleme jako první. O průběhu tě budeme informovat e-mailem. Když se tisk nevybere, peníze ti vrátíme.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f6" aria-expanded="false" aria-controls="f6">Můžu knihu darovat?</button></h3><div id="f6" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Jasně. V košíku můžeš zadat jinou doručovací adresu a ke kartičkové sadě dostaneš v předprodeji věnování od autorky. Stačí napsat, komu má být.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f5" aria-expanded="false" aria-controls="f5">Jaký má kniha formát?</button></h3><div id="f5" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Tištěná kniha 17,6 × 25 cm, 135 stran. Kartičky ve formátu A6 (148 × 105 mm), 33 kusů.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartH">
+  <div class="offcanvas-header">
+    <div><div class="stepper" id="steps"><span class="on">1 Košík</span>·<span>2 Doručení</span>·<span>3 Hotovo</span></div><h2 class="offcanvas-title h4 mb-0" id="cartH">Tvůj košík</h2></div>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Zavřít"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="stepCart">
+      <div id="lines"></div>
+      <div class="cart-empty" id="cartEmpty"><img class="illu" src="img/hero-figure.png" alt=""><p class="mb-0">Košík je zatím prázdný.</p><a class="btn btn-line btn-sm" href="#obchod" data-bs-dismiss="offcanvas">Vybrat variantu</a></div>
+      <div id="cartFoot" hidden>
+        <p class="form-label mt-3">Doprava</p>
+        <div class="ship" id="ship">
+          <label><input class="form-check-input mt-0" type="radio" name="ship" value="79" data-n="Zásilkovna" checked><span>Zásilkovna · výdejní místo</span><span>79 Kč</span></label>
+          <label><input class="form-check-input mt-0" type="radio" name="ship" value="119" data-n="Česká pošta"><span>Česká pošta · na adresu</span><span>119 Kč</span></label>
+          <label><input class="form-check-input mt-0" type="radio" name="ship" value="0" data-n="Osobní odběr"><span>Osobní odběr · Praha</span><span>0 Kč</span></label>
+        </div>
+        <div class="totals"><div><span>Zboží</span><span id="tItems">0 Kč</span></div><div><span>Doprava</span><span id="tShip">79 Kč</span></div><div class="text-graphite"><span>Ušetříš v předprodeji</span><span id="tSave">0 Kč</span></div><div class="sum"><span>Celkem</span><span id="tSum">0 Kč</span></div></div>
+        <button class="btn btn-ink w-100" type="button" id="toCheckout">Pokračovat k doručení</button>
+      </div>
+    </div>
+    <form id="stepAddr" novalidate hidden>
+      <div class="mb-3"><label class="form-label" for="oName">Jméno a příjmení</label><input class="form-control" id="oName" autocomplete="name" required><div class="invalid-feedback">Vyplň prosím jméno.</div></div>
+      <div class="mb-3"><label class="form-label" for="oEmail">E-mail</label><input class="form-control" id="oEmail" type="email" autocomplete="email" required><div class="invalid-feedback">Zadej prosím platný e-mail.</div></div>
+      <div class="mb-3" id="addrWrap"><label class="form-label" for="oAddr">Adresa nebo výdejní místo</label><input class="form-control" id="oAddr" autocomplete="street-address" placeholder="Ulice, město, PSČ" required><div class="invalid-feedback">Vyplň prosím adresu.</div></div>
+      <div class="mb-3"><label class="form-label" for="oNote">Věnování od autorky <span class="text-graphite" style="font-family:var(--f-body);letter-spacing:0;font-size:.8rem">(nepovinné)</span></label><input class="form-control" id="oNote" placeholder="Např. Pro Janu, ať se konečně vyspí"></div>
+      <p class="form-label">Platba</p>
+      <div class="ship mb-3"><label><input class="form-check-input mt-0" type="radio" name="pay" checked><span>Kartou online</span><span></span></label><label><input class="form-check-input mt-0" type="radio" name="pay"><span>Bankovním převodem</span><span></span></label></div>
+      <div class="totals pt-0"><div class="sum"><span>K úhradě</span><span id="tSum2">0 Kč</span></div></div>
+      <button class="btn btn-ink w-100" type="submit">Závazně předobjednat</button>
+      <button class="btn btn-line btn-sm w-100 mt-2" type="button" id="backCart">Zpět do košíku</button>
+      <p class="preview-note mt-3 mb-0">Náhled webu: žádná platba neproběhne a nic se neodešle.</p>
+    </form>
+    <div id="stepDone" class="cart-empty" hidden><img class="illu" src="img/couple.png" alt=""><p class="hand mb-0" style="font-size:1.9rem">Děkujeme!</p><p class="mb-0">Předobjednávka <b id="oNum"></b> je přijatá. Potvrzení a stav tisku ti pošleme e-mailem.</p><button class="btn btn-line btn-sm" type="button" data-bs-dismiss="offcanvas">Zpět na web</button></div>
+  </div>
+</div>
+
+<div class="sticky-buy" id="stickyBuy"><div><b>Předprodej</b><br><span style="font-size:.85rem;opacity:.8">kniha od 449 Kč</span></div><a class="btn btn-sm" href="#obchod">Předobjednat</a></div>
+
+<footer class="gutter">
+  <div class="container-xl d-flex flex-wrap justify-content-between gap-3 align-items-center">
+    <div class="d-flex align-items-center gap-2"><img class="illu" src="img/wordmark.png" alt="TAJEMSTVÍ"><span style="font-family:var(--f-display)">kvalitního <b>spánku.</b></span></div>
+    <span class="text-graphite">© 2026 Veronika Hylánová, MSc. · Kniha nenahrazuje odbornou zdravotní péči.</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function(){
+  var CARDS=[{"n":1,"t":"PROGRESIVNÍ SVALOVÁ RELAXACE","c":["tělo"],"w":["spani"],"d":"5–10 min","r":"ihned (plný efekt za 3–4 týdny)","e":"Uvolnění svalů snižuje stres a napětí, a zrychluje usínání."},{"n":2,"t":"Dech s prodlouženým výdechem 4-6/8","c":["dech"],"w":["spani"],"d":"5–10 min","r":"1 - 3 dny","e":"Snižuje napětí, zpomaluje srdeční rytmus a usnadňuje usínání."},{"n":3,"t":"ČTVERCOVÝ DECH (4–4–4–4)","c":["dech"],"w":["vecer"],"d":"5 min","r":"ihned (plný efekt za 2–4 týdny)","e":"Stabilizuje dech, snižuje stres a navozuje pocit rovnováhy."},{"n":4,"t":"VŠÍMAVÉ SKENOVÁNÍ TĚLA","c":["tělo"],"w":["spani"],"d":"10–20 min","r":"ihned (plný efekt za 2–4 týdny)","e":"Uvolňuje napětí, zlepšuje vědomí propojení těla a mysli, a pomáhá snadněji usnout."},{"n":5,"t":"VĚDOMÝ DECH","c":["dech"],"w":["spani"],"d":"5–15 min","r":"ihned (plný efekt za 1–2 týdny)","e":"Snižuje napětí, zpomaluje srdeční rytmus a usnadňuje usínání."},{"n":6,"t":"AUTOGENNÍ TRÉNINK","c":["tělo"],"w":["spani"],"d":"10–15 min","r":"2 - 4 týdny","e":"Aktivuje parasympatický nervový systém. Při pravidelném cvičení zkracuje dobu usínání a prohlubuje kvalitu spánku."},{"n":7,"t":"REZONAČNÍ DÝCHÁNÍ","c":["dech"],"w":["spani"],"d":"5–10 min","r":"ihned (plný efekt za 4–8 týdnů)","e":"Vyrovnaný dech pomáhá uvolnit napětí a připravuje tělo na spánek."},{"n":8,"t":"DIAFRAGMATICKÉ (BRÁNICOVÉ) DÝCHÁNÍ","c":["dech"],"w":["spani"],"d":"5–10 min","r":"ihned (plný efekt za 1–3 dny)","e":"Snižuje stres, uklidňuje nervový systém a navozuje přirozenou ospalost. Nejlépe funguje ve spojení s vědomým dechem."},{"n":9,"t":"TEPLÁ SPRCHA / KOUPEL","c":["smysly"],"w":["vecer"],"d":"10–30 min","r":"ihned","e":"Zrychluje usínání a prokazatelně zlepšuje kvalitu spánku, zejména fázi hlubokého spánku."},{"n":10,"t":"VIZUALIZACE KLIDNÉHO MÍSTA","c":["vizualizace"],"w":["spani"],"d":"5–10 min","r":"ihned (plný efekt za 1–2 týdny)","e":"Zpomaluje rušivé myšlenkové procesy, uvolňuje tělo i mysl a přirozeně navozuje ospalost."},{"n":11,"t":"VIZUALIZACE ZNÁMÉHO MÍSTA","c":["vizualizace"],"w":["spani"],"d":"5–10 min","r":"ihned (plný efekt za 1–2 týdny)","e":"Zpomaluje rušivé myšlenkové procesy, uvolňuje tělo i mysl a přirozeně navozuje ospalost."},{"n":12,"t":"TECHNIKA PILOTŮ","c":["vizualizace","tělo"],"w":["spani"],"d":"2 min","r":"ihned / plný efekt za 4–6 týdnů","e":"Zpomaluje rušivé myšlenkové procesy, uvolňuje tělo i mysl a přirozeně navozuje ospalost."},{"n":13,"t":"DIGITÁLNÍ ZÁPAD SLUNCE","c":["smysly"],"w":["vecer"],"d":"90 min","r":"1–3 dny","e":"Podporuje přirozenou produkci melatoninu, zklidňuje mysl a zlepšuje schopnost rychle usnout a kvalitu spánku."},{"n":14,"t":"HUDBA PRO SPÁNEK","c":["smysly"],"w":["vecer","spani"],"d":"30–45 min","r":"ihned / plný efekt za 1–2 týdny","e":"Zklidňuje mysl, uvolňuje tělo a pomáhá přirozeně přejít do spánku."},{"n":15,"t":"AUDIOPŘÍBĚHY PRO USÍNÁNÍ","c":["smysly"],"w":["spani","vecer"],"d":"","r":"ihned","e":"Uvolňuje mysl, pomáhá přerušit koloběh přemítání a podporuje klidné usnutí."},{"n":16,"t":"KRÁTKÉ PROTAŽENÍ PŘED SPANÍM","c":["tělo"],"w":["vecer"],"d":"5–10 min","r":"ihned / plný efekt za 1–2 týdny","e":"Uvolňuje svaly, zklidňuje nervový systém a podporuje plynulejší přechod do spánku."},{"n":17,"t":"MENTÁLNÍ PŘESKUPOVÁNÍ","c":["mysl"],"w":["spani"],"d":"5–10 min","r":"ihned","e":"Zaměstnává mysl neutrálními obrazy, přerušuje koloběh rušivých myšlenek a přirozeně navozuje ospalost."},{"n":18,"t":"PARADOXNÍ ÚMYSL","c":["mysl"],"w":["spani"],"d":"","r":"ihned","e":"Snižuje úzkost z nespavosti, uvolňuje mysl a paradoxně usnadňuje přirozené usínání."},{"n":19,"t":"MYŠLENKOVÁ KOTVA","c":["mysl"],"w":["spani"],"d":"5–10 min","r":"ihned","e":"Uklidňuje mysl, snižuje přemítání a přirozeně usnadňuje usínání."},{"n":20,"t":"AROMATERAPIE: LEVANDULE","c":["smysly"],"w":["vecer"],"d":"30 min","r":"ihned","e":"Zklidňuje mysl, snižuje úzkost a může mírně zlepšit kvalitu spánku a usínání."},{"n":21,"t":"BYLINKOVÉ ČAJE","c":["smysly"],"w":["vecer"],"d":"30–60 min","r":"ihned / plný efekt za 1–2 týdny","e":"Uvolňuje tělo, zklidňuje mysl a vytváří večerní rituál, který tělu signalizuje čas odpočinku."},{"n":22,"t":"SEPSÁNÍ ÚKOLŮ NA ZÍTŘEK","c":["mysl"],"w":["vecer"],"d":"3–5 min","r":"ihned","e":"Zkracuje dobu usínání a snižuje noční přemítání."},{"n":23,"t":"Večerní vypsání myšlenek","c":["mysl"],"w":["vecer"],"d":"5–10 min","r":"ihned / plný efekt za 1–2 týdny","e":"Snižuje přemítání, zklidňuje mysl a zkracuje dobu usínání."},{"n":24,"t":"KOGNITIVNÍ ODKLON","c":["mysl"],"w":["spani"],"d":"","r":"ihned","e":"Zabraňuje rozjetí myšlenkových smyček a je obzvlášť účinná při nočním přemítání a vnitřních dialozích."},{"n":25,"t":"VDĚČNOST","c":["mysl"],"w":["vecer"],"d":"2–5 min","r":"ihned / plný efekt za 1–2 týdny","e":"Zjemňuje emoční vypětí, snižuje negativní myšlenky před spaním a podporuje přirozený klid."},{"n":26,"t":"RELAXACE OČNÍCH SVALŮ","c":["tělo"],"w":["spani"],"d":"2–5 min","r":"individuální","e":"Oční pohyby pomáhají odvést pozornost od myšlenek a uvolnit se před spánkem."},{"n":27,"t":"4-7-8 DECH","c":["dech"],"w":["spani"],"d":"2–4 min","r":"1–3 dny","e":"Rychle snižuje srdeční frekvenci a zklidňuje nervový systém před usnutím."},{"n":28,"t":"Střídavé dýchání","c":["dech"],"w":["vecer"],"d":"5–10 min","r":"1–2 týdny","e":"Vyrovnává aktivitu nervového systému, snižuje hladinu kortizolu a připravuje mysl i tělo na klidný spánek."},{"n":29,"t":"SCHŮZKA SE STAROSTMI","c":["mysl"],"w":["vecer"],"d":"15–20 min","r":"1–2 týdny","e":"Přesouvá přemítání mimo postel a výrazně snižuje noční ruminaci."},{"n":30,"t":"DEKATASTROFIZACE","c":["mysl"],"w":["vecer"],"d":"5–10 min","r":"1–2 týdny","e":"Snižuje výkonnostní úzkost ze spánku a přerušuje katastrofické myšlenkové smyčky."},{"n":31,"t":"PONOŘENÍ NOHOU do vody","c":["tělo"],"w":["vecer"],"d":"10–15 min","r":"ihned","e":"Urychluje přirozený pokles tělesné teploty, zkracuje dobu usínání a připravuje tělo na klidný spánek."},{"n":32,"t":"AKUPRESURNÍ BOD P6","c":["tělo"],"w":["vecer"],"d":"3–5 min","r":"individuální","e":"Může mírně snížit úzkost před spaním. Nejlépe funguje v kombinaci s dechovými technikami."},{"n":33,"t":"TEPLOTA LOŽNICE","c":["smysly"],"w":["vecer"],"d":"2 min","r":"ihned (plný efekt za 1–2 týdny)","e":"Urychluje přirozený pokles tělesné teploty, zkracuje dobu usínání a prohlubuje fázi hlubokého spánku."}];
+  var CAT={"tělo":"Tělo","dech":"Dech","mysl":"Mysl","smysly":"Smysly","vizualizace":"Vizualizace"};
+  function img(n,side){var i=2*n-(side==='f'?1:0);return 'img/cards/c-'+(i<10?'0':'')+i+'.jpg'}
+  function cap(s){s=s.toLowerCase();return s.charAt(0).toUpperCase()+s.slice(1)}
+
+  /* night mode */
+  var root=document.documentElement, nb=document.getElementById('nightBtn'), nl=document.getElementById('nightLbl');
+  function isDark(){var t=root.getAttribute('data-theme');if(t)return t==='dark';return window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches}
+  function syncNight(){var d=isDark();nb.setAttribute('aria-pressed',d);nl.textContent=d?'Denní režim':'Večerní režim'}
+  try{var saved=localStorage.getItem('tks-theme');if(saved)root.setAttribute('data-theme',saved)}catch(e){}
+  syncNight();
+  nb.addEventListener('click',function(){var t=isDark()?'light':'dark';root.setAttribute('data-theme',t);try{localStorage.setItem('tks-theme',t)}catch(e){}syncNight()});
+
+  /* story clock */
+  var mins=360, clock=document.getElementById('clock'), th=document.getElementById('thought');
+  var thoughts=['„Co že to po mně chtěl šéf?“','„Nesmím zapomenout poslat ten e-mail.“','„Už zbývá jen pět a půl hodiny…“','„Musím usnout. Hned teď.“','„Proč zrovna dneska?!“'],ti=0;
+  function showClock(){clock.textContent=Math.floor(mins/60)+':'+('0'+mins%60).slice(-2)}
+  document.getElementById('snooze').addEventListener('click',function(){mins=Math.max(0,mins-10);showClock();ti=(ti+1)%thoughts.length;th.textContent=thoughts[ti]});
+  setInterval(function(){if(mins>0&&!document.hidden){mins--;showClock()}},4000);
+
+  /* puzzle */
+  var PIECES=[
+    {t:'Nastavení mysli',x:'Obavy a snaha usnout spánek spolehlivě odhání. Tělo se přepne do pohotovosti a roztočí se bludný kruh nespavosti. Naučíš se z něj vystoupit.',l:['Proč nemáš být spánkem posedlý/á','Záznamník a práce s automatickými myšlenkami','Co dělat, když v noci nemůžeš usnout']},
+    {t:'Večerní návyky',x:'To, co večer sleduješ, jde s tebou v noci spát. Nastavíš si večerní režim a rituály, které tělu dají signál, že je čas zpomalit.',l:['Čas odpojení: 60–90 minut před spaním','Jak číst a používat kartičky rituálů','Večerní vypsání myšlenek']},
+    {t:'Životní styl',x:'Tělesné hodiny tikají podle světla. Zjistíš, jak by měl vypadat tvůj den, aby večer přišel spánek sám.',l:['Pravidelnost, ranní světlo a pohyb','Kofein, alkohol a strava v souvislostech','Doplňky stravy a spánek: co skutečně víme']},
+    {t:'Prostředí spánku',x:'Sestav si prostředí, které ti pomůže dobře se vyspat. Teplota, světlo, zvuky i to, co patří a nepatří do postele.',l:['Co ovlivňuje kvalitu spánku v ložnici','Spánkové pomůcky a jejich limity','Ložnice jako místo jen pro odpočinek']}
+  ];
+  var pieces=[].slice.call(document.querySelectorAll('.piece')),seen=[true,false,false,false];
+  function showPiece(i){
+    var p=PIECES[i];seen[i]=true;
+    pieces.forEach(function(b,j){b.classList.toggle('active',i===j);b.classList.toggle('seen',seen[j]&&i!==j);b.setAttribute('aria-selected',i===j);
+      if(seen[j])b.innerHTML='<span class="k">DÍL Č. '+(j+1)+'</span>'+PIECES[j].t.replace(' ','<br>')});
+    document.getElementById('pNum').textContent='DÍL Č. '+(i+1);
+    document.getElementById('pTitle').textContent=p.t;
+    document.getElementById('pText').textContent=p.x;
+    document.getElementById('pList').innerHTML=p.l.map(function(s){return '<li>'+s+'</li>'}).join('');
+    document.getElementById('pDots').innerHTML=seen.map(function(s){return '<i'+(s?' class="on"':'')+'></i>'}).join('');
+    document.getElementById('pDone').hidden=!seen.every(Boolean);
+  }
+  pieces.forEach(function(b,i){b.addEventListener('click',function(){showPiece(i)})});
+  showPiece(0);
+
+  /* cards grid */
+  var grid=document.getElementById('cardGrid'),fCat='',fWhen='';
+  function cardHTML(c,eager){
+    return '<button class="flip" type="button" aria-label="'+cap(c.t)+'. Otočit kartičku"><div class="flip-inner">'+
+      '<img class="front" src="'+img(c.n,'f')+'" alt="'+cap(c.t)+', líc" loading="'+(eager?'eager':'lazy')+'">'+
+      '<img class="back" src="'+img(c.n,'b')+'" alt="'+cap(c.t)+', rub: '+c.e.replace(/"/g,'')+'" loading="lazy">'+
+      '</div></button>';
+  }
+  function renderGrid(){
+    var list=CARDS.filter(function(c){return (!fCat||c.c.indexOf(fCat)>-1)&&(!fWhen||c.w.indexOf(fWhen)>-1)});
+    grid.innerHTML=list.map(function(c,i){
+      return '<div class="col">'+cardHTML(c,i<4)+'<div class="cardmeta"><b>'+c.c.map(function(x){return CAT[x]}).join(' + ')+'</b><span>'+(c.d||'')+'</span></div></div>'}).join('');
+    document.getElementById('cardCount').textContent=list.length;
+  }
+  grid.addEventListener('click',function(e){var f=e.target.closest('.flip');if(f)f.classList.toggle('flipped')});
+  function group(id,attr,set){var g=document.getElementById(id);g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+    [].forEach.call(g.querySelectorAll('button'),function(x){x.classList.toggle('active',x===b)});set(b.getAttribute(attr))})}
+  group('catFilters','data-cat',function(v){fCat=v;renderGrid()});
+  group('whenFilters','data-when',function(v){fWhen=v;renderGrid()});
+  renderGrid();
+
+  /* draw two rituals */
+  var mood='';
+  group('mood','data-mood',function(v){mood=v});
+  function pick(when,avoid){
+    var cats=mood?mood.split(','):null;
+    var pool=CARDS.filter(function(c){return c.w.indexOf(when)>-1&&c.n!==avoid&&(!cats||c.c.some(function(x){return cats.indexOf(x)>-1}))});
+    if(!pool.length)pool=CARDS.filter(function(c){return c.w.indexOf(when)>-1&&c.n!==avoid});
+    return pool[Math.floor(Math.random()*pool.length)];
+  }
+  function fill(slotId,label,c){
+    var s=document.getElementById(slotId);
+    s.innerHTML='<span class="lbl">'+label+'</span><div class="shuffle">'+cardHTML(c,true)+'</div><span class="eff"><b>'+cap(c.t)+'</b>'+(c.d?' · '+c.d:'')+'<br><span class="text-graphite">'+c.e+'</span></span>';
+    s.querySelector('.flip').addEventListener('click',function(){this.classList.toggle('flipped')});
+  }
+  document.getElementById('drawBtn').addEventListener('click',function(){
+    var v=pick('vecer'),s=pick('spani',v.n);fill('slotV','Během večera',v);fill('slotS','Před spaním',s);this.textContent='Vylosovat znovu'});
+
+  /* look inside */
+  var PAGES=[
+    {f:'s-012',t:'Dobrá zpráva na úvod',d:'Kvalitní spánek je ve velké části dovednost, kterou se lze naučit.'},
+    {f:'s-016',t:'Mýty a polopravdy',d:'Brýle proti modrému světlu, 8 hodin pro každého, melatonin…'},
+    {f:'s-021',t:'Díl č. 1: Nastavení mysli',d:'Každý díl skládačky otevírá vlastní ilustrace.'},
+    {f:'s-022',t:'Bludný kruh nespavosti',d:'Proč nás obavy udržují vzhůru.'},
+    {f:'s-024',t:'Jak to funguje?',d:'Od obav přes napětí až k problému usnout.'},
+    {f:'s-041',t:'Kolo emocí',d:'Cvičení, které pomáhá pojmenovat, co cítíš.'},
+    {f:'s-052',t:'Když spánek i tak nepřichází',d:'Co dělat, když se v noci vzbudíš.'},
+    {f:'s-091',t:'Spánkové minimum',d:'Tři kroky, kterými začít, i když nemáš čas na všechno.'},
+    {f:'s-106',t:'Páry: společná cesta',d:'Bonusová část pro ty, kdo sdílejí ložnici.'},
+    {f:'s-125',t:'Malý slovník pojmů',d:'Adenosin, kortizol, cirkadiánní rytmus srozumitelně.'}
+  ];
+  var inner=document.getElementById('pagesInner'),dots=document.getElementById('pageDots');
+  inner.innerHTML=PAGES.map(function(p,i){return '<div class="carousel-item'+(i?'':' active')+'"><img src="img/pages/'+p.f+'.jpg" alt="Stránka z knihy: '+p.t+'" loading="'+(i?'lazy':'eager')+'"></div>'}).join('');
+  dots.innerHTML=PAGES.map(function(p,i){return '<button type="button" data-bs-target="#pages" data-bs-slide-to="'+i+'" aria-label="Stránka '+(i+1)+'"'+(i?'':' class="active" aria-current="true"')+'></button>'}).join('');
+  function cap0(i){document.getElementById('pageTitle').textContent=PAGES[i].t;document.getElementById('pageDesc').textContent=PAGES[i].d;
+    [].forEach.call(dots.children,function(b,j){b.classList.toggle('active',i===j)})}
+  cap0(0);
+  document.getElementById('pages').addEventListener('slid.bs.carousel',function(e){cap0(e.to)});
+
+  /* quiz */
+  var Q=[
+    {s:'Každý by měl spát 8 hodin.',a:'myth',x:'Optimální délka spánku je individuální a ovlivněná věkem, genetikou a životním stylem. Někteří dospělí fungují dobře i na 6,5–7 hodinách, jiní potřebují přes 9 hodin.'},
+    {s:'Krátké probuzení uprostřed noci je normální.',a:'true',x:'Před průmyslovou revolucí byl spánek často rozdělen na dvě části s přestávkou uprostřed noci. Krátké probuzení samo o sobě není problém, spíš ozvěna původního rytmu těla.'},
+    {s:'Alkohol před spaním pomáhá.',a:'myth',x:'Alkohol sice zrychlí usínání, ale snižuje kvalitu spánku, zkracuje fázi REM a může způsobovat častější probouzení.'},
+    {s:'S brýlemi blokujícími modré světlo můžu koukat na obrazovky do noci.',a:'myth',x:'Modré světlo večer skutečně potlačuje tvorbu melatoninu. Brýle ale problém nevyřeší, protože kromě barvy hraje roli i jas obrazovky a to, co na ní sleduješ.'},
+    {s:'I klidné ležení se zavřenýma očima má smysl, když nejde usnout.',a:'true',x:'Právě snaha usnout je jedním z hlavních důvodů, proč spánek nepřichází. Samotné klidové ležení se zavřenýma očima má měřitelné přínosy. Když nejde usnout, stačí odpočívat.'},
+    {s:'Delší spánek o víkendu dožene nevyspání z pracovního týdne.',a:'myth',x:'Částečně pomáhá, ale neobnovuje úplně kvalitu spánku a může rozladit vnitřní biologické hodiny.'}
+  ];
+  var qi=0,score=0,answered=false,qb=document.getElementById('qBtns');
+  function showQ(){answered=false;var q=Q[qi];document.getElementById('qCount').textContent=(qi+1)+' / '+Q.length;document.getElementById('qText').textContent='„'+q.s+'“';
+    document.getElementById('qVerdict').classList.remove('show');[].forEach.call(qb.children,function(b){b.disabled=false;b.classList.remove('active')})}
+  qb.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||answered)return;answered=true;var q=Q[qi],ok=b.getAttribute('data-a')===q.a;if(ok)score++;
+    b.classList.add('active');[].forEach.call(qb.children,function(x){x.disabled=true});
+    document.getElementById('qV').textContent=(ok?'Správně! ':'Kdepak. ')+(q.a==='myth'?'Je to mýtus.':'Je to pravda.');
+    document.getElementById('qExp').textContent=q.x;document.getElementById('qScore').textContent='Skóre '+score;
+    document.getElementById('qNext').textContent=qi<Q.length-1?'Další otázka':'Zkusit znovu';
+    document.getElementById('qVerdict').classList.add('show')});
+  document.getElementById('qNext').addEventListener('click',function(){if(qi<Q.length-1){qi++}else{qi=0;score=0;document.getElementById('qScore').textContent='Skóre 0'}showQ()});
+  showQ();
+
+  /* waitlist */
+  var form=document.getElementById('wlForm');
+  form.addEventListener('submit',function(e){e.preventDefault();form.classList.add('was-validated');if(!form.checkValidity())return;
+    form.hidden=true;document.getElementById('wlOkMsg').hidden=false});
+
+  /* shop */
+  var PROD={kniha:{t:'Kniha',p:449,o:499,img:'img/cover.jpg'},sada:{t:'Kniha + 33 kartiček',p:699,o:799,img:'img/cards/c-01.jpg'}};
+  var cart={};try{cart=JSON.parse(localStorage.getItem('tks-cart')||'{}')||{}}catch(e){cart={}}
+  function save(){try{localStorage.setItem('tks-cart',JSON.stringify(cart))}catch(e){}}
+  function kc(n){return n.toLocaleString('cs-CZ')+' Kč'}
+  function shipVal(){var r=document.querySelector('#ship input:checked');return r?+r.value:0}
+  function renderCart(){
+    var ids=Object.keys(cart).filter(function(k){return cart[k]>0&&PROD[k]}),items=0,saveSum=0,count=0;
+    document.getElementById('lines').innerHTML=ids.map(function(k){var p=PROD[k],q=cart[k];items+=p.p*q;saveSum+=(p.o-p.p)*q;count+=q;
+      return '<div class="line"><img src="'+p.img+'" alt=""><div><b>'+p.t+'</b><small>'+kc(p.p)+' / ks</small></div><div class="text-end"><div class="qty" data-line="'+k+'"><button type="button" data-d="-1" aria-label="Méně">−</button><output>'+q+'</output><button type="button" data-d="1" aria-label="Více">+</button></div><div class="mt-1" style="font-size:.85rem;font-weight:700">'+kc(p.p*q)+'</div></div></div>'}).join('');
+    var empty=!ids.length;document.getElementById('cartEmpty').hidden=!empty;document.getElementById('cartFoot').hidden=empty;
+    var sh=shipVal();document.getElementById('tItems').textContent=kc(items);document.getElementById('tShip').textContent=kc(sh);document.getElementById('tSave').textContent='−'+kc(saveSum);
+    document.getElementById('tSum').textContent=kc(items+sh);document.getElementById('tSum2').textContent=kc(items+sh);
+    [].forEach.call(document.querySelectorAll('.cart-n'),function(n){n.textContent=count});
+  }
+  [].forEach.call(document.querySelectorAll('.product .qty'),function(q){q.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var o=q.querySelector('output');o.textContent=Math.max(1,Math.min(20,+o.textContent+ +b.getAttribute('data-d')))})});
+  var oc=null;function openCart(){if(window.bootstrap){oc=oc||bootstrap.Offcanvas.getOrCreateInstance(document.getElementById('cart'));oc.show()}}
+  [].forEach.call(document.querySelectorAll('.add'),function(b){b.addEventListener('click',function(){var id=b.getAttribute('data-id'),q=+document.querySelector('.qty[data-for="'+id+'"] output').textContent;
+    cart[id]=(cart[id]||0)+q;save();showStep('cart');renderCart();[].forEach.call(document.querySelectorAll('.cartbtn'),function(c){c.classList.remove('bump');void c.offsetWidth;c.classList.add('bump')});openCart()})});
+  document.getElementById('lines').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var k=b.closest('.qty').getAttribute('data-line');cart[k]=Math.max(0,Math.min(20,(cart[k]||0)+ +b.getAttribute('data-d')));if(!cart[k])delete cart[k];save();renderCart()});
+  document.getElementById('ship').addEventListener('change',function(){renderCart();var pick=shipVal()===0;document.getElementById('oAddr').required=!pick;document.getElementById('addrWrap').hidden=pick});
+  function showStep(st){document.getElementById('stepCart').hidden=st!=='cart';document.getElementById('stepAddr').hidden=st!=='addr';document.getElementById('stepDone').hidden=st!=='done';
+    var map={cart:0,addr:1,done:2};[].forEach.call(document.querySelectorAll('#steps span'),function(s,i){s.classList.toggle('on',i===map[st])});
+    document.getElementById('cartH').textContent={cart:'Tvůj košík',addr:'Doručení a platba',done:'Hotovo'}[st]}
+  document.getElementById('toCheckout').addEventListener('click',function(){showStep('addr')});
+  document.getElementById('backCart').addEventListener('click',function(){showStep('cart')});
+  var addr=document.getElementById('stepAddr');
+  addr.addEventListener('submit',function(e){e.preventDefault();addr.classList.add('was-validated');if(!addr.checkValidity())return;
+    var count=0;Object.keys(cart).forEach(function(k){count+=cart[k]});
+    document.getElementById('oNum').textContent='#TKS-'+String(Math.floor(1000+Math.random()*9000));
+    var fn=document.getElementById('fundN'),v=Math.min(300,+fn.textContent+count);fn.textContent=v;var bar=document.getElementById('fundBar');bar.setAttribute('aria-valuenow',v);bar.firstElementChild.style.width=(v/3)+'%';
+    cart={};save();renderCart();addr.reset();addr.classList.remove('was-validated');showStep('done')});
+  renderCart();
+
+  /* sticky buy bar on mobile, hidden while shop is on screen */
+  var sb=document.getElementById('stickyBuy'),shopEl=document.getElementById('obchod'),heroEl=document.getElementById('top');
+  if('IntersectionObserver' in window){var vis={};var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[e.target.id]=e.isIntersecting});sb.classList.toggle('show',!vis.obchod&&!vis.top&&!vis.predprodej)},{threshold:0});
+    io.observe(shopEl);io.observe(heroEl);io.observe(document.getElementById('predprodej'))}
+
+  /* close mobile menu on link click */
+  [].forEach.call(document.querySelectorAll('#nav .nav-link, #nav .btn'),function(a){a.addEventListener('click',function(){var n=document.getElementById('nav');if(n.classList.contains('show')&&window.bootstrap)bootstrap.Collapse.getOrCreateInstance(n).hide()})});
+})();
+</script>
+
+</body>
+</html>
